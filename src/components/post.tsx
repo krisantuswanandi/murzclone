@@ -5,9 +5,14 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
+import {
+  IconMessageCircle,
+  IconThumbUp,
+  IconThumbDown,
+} from "@tabler/icons-react";
 import photo from "@/assets/logo.webp";
+import { PostAction } from "./post-action";
 
 const Post = () => {
   function like() {
@@ -41,15 +46,9 @@ const Post = () => {
       </CardHeader>
       <CardContent>Content</CardContent>
       <CardFooter>
-        <Button size="sm" variant="ghost" onClick={like}>
-          Like
-        </Button>
-        <Button size="sm" variant="ghost" onClick={dislike}>
-          Dislike
-        </Button>
-        <Button size="sm" variant="ghost" asChild>
-          <Link to="/">Comment</Link>
-        </Button>
+        <PostAction icon={<IconThumbUp />} count={50} onClick={like} />
+        <PostAction icon={<IconThumbDown />} count={50} onClick={dislike} />
+        <PostAction icon={<IconMessageCircle />} count={50} to="/" />
       </CardFooter>
     </Card>
   );

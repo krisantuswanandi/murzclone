@@ -1,5 +1,6 @@
 import { Post } from "./post";
 import { Button } from "@/components/ui/button";
+import { IconRefresh } from "@tabler/icons-react";
 
 const Posts = () => {
   function loadMore() {
@@ -13,7 +14,12 @@ const Posts = () => {
       <Post />
       <Post />
       <div className="text-center mt-4">
-        <Button variant="ghost" onClick={loadMore}>
+        <Button
+          variant="ghost"
+          className="hover:bg-zinc-200"
+          onClick={loadMore}
+        >
+          <IconRefresh />
           Load more Posts
         </Button>
       </div>

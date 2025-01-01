@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
+    "@tabler/icons-react": "^3.26.0",
     "@tanstack/react-router": "^1.92.11",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
