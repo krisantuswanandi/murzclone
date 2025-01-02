@@ -15,7 +15,7 @@ const Posts = () => {
     );
   }
 
-  const posts = data.pages.flatMap((page) => page);
+  const posts = data.pages.flatMap((page) => page).filter((page) => !!page);
 
   return (
     <div>
