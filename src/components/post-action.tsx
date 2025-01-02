@@ -16,7 +16,7 @@ const PostAction = ({ icon, count, ...props }: Props) => {
       <Button variant="ghost" className="gap-1" asChild>
         <Link to={props.to}>
           {icon}
-          {count}
+          {count || null}
         </Link>
       </Button>
     );
@@ -24,7 +24,7 @@ const PostAction = ({ icon, count, ...props }: Props) => {
   return (
     <Button variant="ghost" className="gap-1" onClick={props.onClick}>
       {icon}
-      {count}
+      {count || null}
     </Button>
   );
 };
